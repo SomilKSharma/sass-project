@@ -1,9 +1,11 @@
 @import 'config';
 @import 'resets';
+@import 'home';
+@import 'menu';
 
 body {
     background: $primary-color;
-    color: white;
+    color: set-text-color($primary-color);
     height: 100vh;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -13,7 +15,7 @@ h1, h2, h3 {
 }
 
 a {
-    color: white;
+    color: set-text-color($primary-color);
     text-decoration: none;
 }
 
@@ -34,6 +36,7 @@ main {
 
         a {
             padding: 0.4rem;
+            @include transition-ease;
             
             &:hover {
                 color: $accent-color;

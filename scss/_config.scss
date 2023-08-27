@@ -1,6 +1,6 @@
 // Sass variables
 
-$primary-color: rgb(103, 8, 8);
+$primary-color: rgb(19, 3, 3);
 $accent-color: rgb(218, 240, 20);
 $text-color: rgb(223, 237, 223);
 $mobile: 300px;
@@ -11,3 +11,17 @@ $font-weights: (
     "medium": 500,
     "bold": 700
 );
+
+// a mixin
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}
+
+//  a function 
+@function set-text-color($color) {
+    @if (lightness($color)>40%) {
+        @return black;
+    } @else {
+        @return white;
+    }
+}
