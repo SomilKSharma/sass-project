@@ -1,0 +1,31 @@
+/* Media query for medium-sized screens */
+@include media-md {
+    /* Hiding the hamburger menu button on medium-sized screens */
+    .menu-btn {
+        visibility: hidden;
+    }
+
+    /* Displaying the navigation menu on medium-sized screens */
+    .nav {
+        visibility: visible;
+
+        /* Styling for the expanded navigation menu on medium-sized screens */
+        .menu-nav {
+            display: block;
+            transform: translateY(0);
+            height: 100%;
+            text-align: right;
+        }
+
+        /* Styling for individual menu items on medium-sized screens */
+        &__item {
+            display: inline;
+            padding-right: 1.5rem;
+        }
+
+        /* Styling for menu item links on medium-sized screens */
+        &__link {
+            font-size: 1.5rem;
+        }
+    }
+}

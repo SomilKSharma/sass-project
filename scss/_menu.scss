@@ -1,3 +1,4 @@
+/* Styling for the hamburger menu button */
 .menu-btn {
     position: absolute;
     z-index: 1;
@@ -8,6 +9,7 @@
     cursor: pointer;
     @include transition-ease;
 
+    /* Styling for the burger lines */
     &__burger {
         position: absolute;
         right: 0;
@@ -17,6 +19,7 @@
         background: set-text-color($primary-color);
         @include transition-ease;
 
+        /* Styling for the top line of the burger */
         &::before {
             content: '';
             position: absolute;
@@ -27,6 +30,7 @@
             @include transition-ease;
         }
 
+        /* Styling for the bottom line of the burger */
         &::after {
             content: '';
             position: absolute;
@@ -37,6 +41,7 @@
             @include transition-ease;
         }
 
+        /* Styling for the open (clicked) state of the burger */
         &.open {
             transform: rotate(720deg);
             background: transparent;
@@ -50,10 +55,10 @@
                 transform: rotate(-45deg) translate(3px,-7px);
             }
         }
-
     }
 }
 
+/* Styling for the navigation menu */
 .nav {
     position: fixed;
     top: 0;
@@ -62,10 +67,12 @@
     opacity: 0.98;
     visibility: hidden;
 
+    /* Styling for the open state of the navigation menu */
     &.open {
         visibility: visible;
     }
 
+    /* Styling for the navigation menu items */
     .menu-nav {
         display: flex;
         flex-flow: column wrap;
@@ -79,8 +86,47 @@
         transform: translateY(-100%);
         @include transition-ease;
 
+        /* Styling for the open state of the navigation menu items */
         &.open {
             transform: translateY(0);
         }
+
+        /* Styling for individual menu items */
+        &__item {
+            transform: translateX(100vw);
+            @include transition-ease;
+
+            /* Styling for the open state of individual menu items */
+            &.open {
+                transform: translateX(0);
+            }
+
+            /* Styling for the active menu item */
+            &.active > a {
+                color: $accent-color;
+            }
+        }
+
+        /* Styling for menu item links */
+        &__link {
+            display: inline-block;
+            font-size: 2rem;
+            text-transform: uppercase;
+            padding: 2rem 0;
+            font-weight: 300;
+            @include transition-ease;
+
+            /* Styling for link hover state */
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+}
+
+/* Loop for staggered transition delays */
+@for $i from 1 through 4 {
+    .menu-nav__item:nth-child(#{$i}) {
+        transition-delay: ($i *0.1s) + 0.15s;
     }
 }

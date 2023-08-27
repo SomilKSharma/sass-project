@@ -1,27 +1,41 @@
 // Sass variables
 
+// Define the primary color used in the design
 $primary-color: rgb(19, 3, 3);
+
+// Define an accent color for highlights
 $accent-color: rgb(218, 240, 20);
+
+// Define a text color for the body text
 $text-color: rgb(223, 237, 223);
+
+// Define a breakpoint value for mobile screens
 $mobile: 300px;
 
-// hashmap
+// Hashmap to store different font weights
 $font-weights: (
     "regular": 400,
     "medium": 500,
     "bold": 700
 );
 
-// a mixin
+// A mixin for adding ease-in-out transitions
 @mixin transition-ease {
     transition: all 0.5s ease-in-out;
 }
 
-//  a function 
+// A function to determine text color based on background color
 @function set-text-color($color) {
-    @if (lightness($color)>40%) {
+    @if (lightness($color) > 40%) {
         @return black;
     } @else {
         @return white;
+    }
+}
+
+// A mixin for defining styles within a media query for medium-sized screens
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
     }
 }
