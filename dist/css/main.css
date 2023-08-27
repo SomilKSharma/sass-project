@@ -6,20 +6,47 @@
 
 body {
   background: rgb(103, 8, 8);
-  color: rgb(223, 237, 223);
-  font-weight: 700;
+  color: white;
+  height: 100vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  margin: 0 auto;
-}
-.main .main-paragraph {
+h1, h2, h3 {
   font-weight: 400;
 }
-.main .main-paragraph:hover {
-  color: pink;
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+main .social-icons {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+main .social-icons a {
+  padding: 0.4rem;
+}
+main .social-icons a:hover {
+  color: rgb(218, 240, 20);
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  text-align: right;
 }/*# sourceMappingURL=main.css.map */

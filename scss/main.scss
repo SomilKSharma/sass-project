@@ -1,34 +1,52 @@
-// resets
-@import './resets';
+@import 'config';
+@import 'resets';
 
-// sass variables
-@import './variables';
-
-// function for font weight
-@function weight($weight-name) {
-    @return map-get($font-weights, $weight-name);
-}
-
-// body
 body {
     background: $primary-color;
-    color: $text-color;
-    font-weight: weight(bold);
+    color: white;
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-// main class accessed
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto;
-    // nest the p element
-    #{&}-paragraph {
-        font-weight: weight(regular);
+h1, h2, h3 {
+    font-weight: 400;
+}
 
-        &:hover {
-            color: pink;
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    .social-icons {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+
+        a {
+            padding: 0.4rem;
+            
+            &:hover {
+                color: $accent-color;
+            }
         }
     }
+}
+
+footer {
+    font-size: 1rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: right;
+
 }
