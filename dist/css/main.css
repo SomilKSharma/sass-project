@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(103, 8, 8);
+  color: rgb(223, 237, 223);
+  font-weight: 700;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.main .main-paragraph {
+  font-weight: 400;
+}
+.main .main-paragraph:hover {
+  color: pink;
+}/*# sourceMappingURL=main.css.map */

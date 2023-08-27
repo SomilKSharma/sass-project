@@ -1,0 +1,34 @@
+// resets
+@import './resets';
+
+// sass variables
+@import './variables';
+
+// function for font weight
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+// body
+body {
+    background: $primary-color;
+    color: $text-color;
+    font-weight: weight(bold);
+}
+
+// main class accessed
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    // nest the p element
+    #{&}-paragraph {
+        font-weight: weight(regular);
+
+        &:hover {
+            color: pink;
+        }
+    }
+}
