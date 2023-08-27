@@ -11,8 +11,6 @@
   overflow: hidden;
   align-items: center;
   text-align: center;
-  background: linear-gradient(to right, rgba(19, 3, 3, 0.9), rgba(19, 3, 3, 0.3)), url("../img/user.jpg") center top;
-  background-size: cover;
 }
 .home__name {
   font-size: 5rem;
